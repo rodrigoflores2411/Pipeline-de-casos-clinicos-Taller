@@ -1,0 +1,2 @@
+﻿input_records,accepted,rejected,schema_valid,protected_leak_count,duplicate_evidence_ids,missing_reveal_policy_count,conversion_success_rate_pct,schema_valid_rate_pct
+1,0,1,1,1,0,0,0.0,100.0

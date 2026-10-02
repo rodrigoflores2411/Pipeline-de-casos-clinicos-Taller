@@ -1,0 +1,39 @@
+[
+  {
+    "source_dataset": "manual",
+    "source_id": "CARD-002",
+    "specialty": "Pediatria",
+    "difficulty": "Media",
+    "age": 25,
+    "sex": "Masculino",
+    "chief_complaint": "Dolor muscular",
+    "symptoms": [
+      "Dolor en espalda baja",
+      "Dolor en los brazos"
+    ],
+    "history": [
+      "Operación por accidente/ se atendio la zona de las costillas"
+    ],
+    "allergies": [
+      "penisilina"
+    ],
+    "laboratory": [
+      {
+        "name": "Electromiografía",
+        "value": "5",
+        "unit": "mV"
+      }
+    ],
+    "radiology": [],
+    "specialist": [
+      {
+        "name": "traumatologo",
+        "text": "Tiene los huesos mal colocados"
+      }
+    ],
+    "diagnosis": "tiene cancer en los huesos ( no se me ocurrio nda mas profe )",
+    "diagnosis_synonyms": [],
+    "reference_treatment": "Dialisis",
+    "original_answer": "tiene cancer en los huesos ( no se me ocurrio nda mas profe )"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "source_id": "BAD-001",
+  "errors": [
+    "ValidationError: 1 validation error for RawClinicalCase\ndiagnosis\n  Field required [type=missing, input_value={'source_dataset': 'manua...int': 'Dolor abdominal'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+  ]
+}

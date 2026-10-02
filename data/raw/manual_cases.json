@@ -1,0 +1,52 @@
+[
+  {
+    "source_dataset": "manual",
+    "source_id": "CARD-001",
+    "specialty": "cardiologia",
+    "difficulty": "intermedio",
+    "age": 58,
+    "sex": "Masculino",
+    "chief_complaint": "Dolor torácico opresivo de inicio súbito",
+    "symptoms": [
+      "Dolor torácico 8/10",
+      "Náuseas y sudoración"
+    ],
+    "history": [
+      "Hipertensión arterial",
+      "Fumador de 20 paquetes-año"
+    ],
+    "allergies": [],
+    "laboratory": [
+      {
+        "name": "Troponina T",
+        "value": 1.8,
+        "unit": "ng/ml"
+      },
+      {
+        "name": "Glucosa",
+        "value": 118,
+        "unit": "mg/dl"
+      }
+    ],
+    "radiology": [
+      {
+        "name": "ECG",
+        "finding": "Elevación del ST en II, III y aVF"
+      }
+    ],
+    "specialist": [
+      {
+        "name": "Cardiología",
+        "text": "Recomienda manejo urgente y correlación con biomarcadores"
+      }
+    ],
+    "diagnosis": "Infarto agudo de miocardio inferior",
+    "diagnosis_synonyms": [
+      "Infarto inferior",
+      "IAM inferior",
+      "STEMI inferior"
+    ],
+    "reference_treatment": "Reperfusión urgente según elegibilidad",
+    "original_answer": "Infarto agudo de miocardio inferior"
+  }
+]

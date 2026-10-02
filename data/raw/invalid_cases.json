@@ -1,0 +1,9 @@
+[
+  {
+    "source_dataset": "manual",
+    "source_id": "BAD-001",
+    "age": 45,
+    "sex": "masculino",
+    "chief_complaint": "Dolor abdominal"
+  }
+]

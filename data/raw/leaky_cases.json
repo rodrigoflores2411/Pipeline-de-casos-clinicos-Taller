@@ -1,0 +1,17 @@
+[
+  {
+    "source_dataset": "manual",
+    "source_id": "LEAK-001",
+    "specialty": "cardiologia",
+    "age": 58,
+    "sex": "masculino",
+    "chief_complaint": "Paciente con Infarto agudo de miocardio inferior y dolor torácico",
+    "symptoms": [
+      "Dolor torácico"
+    ],
+    "diagnosis": "Infarto agudo de miocardio inferior",
+    "diagnosis_synonyms": [
+      "Infarto inferior"
+    ]
+  }
+]

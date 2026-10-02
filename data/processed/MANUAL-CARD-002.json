@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "case_id": "MANUAL-CARD-002",
+  "source": {
+    "dataset": "manual",
+    "source_id": "CARD-002"
+  },
+  "metadata": {
+    "specialty": "Pediatria",
+    "difficulty": "Media"
+  },
+  "initial_presentation": {
+    "demographics": {
+      "age": 25,
+      "sex": "masculino"
+    },
+    "chief_complaint": "Dolor muscular",
+    "facts": []
+  },
+  "patient": {
+    "symptoms": [
+      {
+        "evidence_id": "MANUAL-CARD-002.patient.symptoms.symptom_01",
+        "code": "symptom_01",
+        "label": "Síntoma",
+        "value": null,
+        "unit": null,
+        "text": "Dolor en espalda baja"
+      },
+      {
+        "evidence_id": "MANUAL-CARD-002.patient.symptoms.symptom_02",
+        "code": "symptom_02",
+        "label": "Síntoma",
+        "value": null,
+        "unit": null,
+        "text": "Dolor en los brazos"
+      }
+    ],
+    "history": [
+      {
+        "evidence_id": "MANUAL-CARD-002.patient.history.history_01",
+        "code": "history_01",
+        "label": "Antecedente",
+        "value": null,
+        "unit": null,
+        "text": "Operación por accidente/ se atendio la zona de las costillas"
+      }
+    ],
+    "allergies": [
+      {
+        "evidence_id": "MANUAL-CARD-002.patient.allergies.allergy_01",
+        "code": "allergy_01",
+        "label": "Alergia",
+        "value": null,
+        "unit": null,
+        "text": "penisilina"
+      }
+    ]
+  },
+  "laboratory": {
+    "tests": [
+      {
+        "evidence_id": "MANUAL-CARD-002.laboratory.electromiografía",
+        "code": "electromiografía",
+        "label": "Electromiografía",
+        "value": "5",
+        "unit": "mV",
+        "text": null
+      }
+    ]
+  },
+  "radiology": {
+    "studies": []
+  },
+  "specialist": {
+    "consultations": [
+      {
+        "evidence_id": "MANUAL-CARD-002.specialist.traumatologo",
+        "code": "traumatologo",
+        "label": "traumatologo",
+        "value": null,
+        "unit": null,
+        "text": "Tiene los huesos mal colocados"
+      }
+    ]
+  },
+  "reveal_policy": {
+    "MANUAL-CARD-002.patient.symptoms.symptom_01": {
+      "owner": "patient",
+      "mode": "on_request",
+      "intents": [
+        "ask_patient"
+      ],
+      "requires": {}
+    },
+    "MANUAL-CARD-002.patient.symptoms.symptom_02": {
+      "owner": "patient",
+      "mode": "on_request",
+      "intents": [
+        "ask_patient"
+      ],
+      "requires": {}
+    },
+    "MANUAL-CARD-002.patient.history.history_01": {
+      "owner": "patient",
+      "mode": "on_request",
+      "intents": [
+        "ask_patient"
+      ],
+      "requires": {}
+    },
+    "MANUAL-CARD-002.patient.allergies.allergy_01": {
+      "owner": "patient",
+      "mode": "on_request",
+      "intents": [
+        "ask_patient"
+      ],
+      "requires": {}
+    },
+    "MANUAL-CARD-002.laboratory.electromiografía": {
+      "owner": "laboratory",
+      "mode": "after_order",
+      "intents": [
+        "request_lab"
+      ],
+      "requires": {
+        "test": "electromiografía"
+      }
+    },
+    "MANUAL-CARD-002.specialist.traumatologo": {
+      "owner": "specialist",
+      "mode": "after_consult",
+      "intents": [
+        "request_specialist"
+      ],
+      "requires": {
+        "consultation": "traumatologo"
+      }
+    }
+  },
+  "protected_evaluation": {
+    "diagnosis": "tiene cancer en los huesos ( no se me ocurrio nda mas profe )",
+    "diagnosis_synonyms": [],
+    "reference_treatment": "Dialisis",
+    "original_answer": "tiene cancer en los huesos ( no se me ocurrio nda mas profe )"
+  },
+  "conversion_metadata": {
+    "pipeline_version": "1.0",
+    "status": "accepted",
+    "warnings": []
+  }
+}

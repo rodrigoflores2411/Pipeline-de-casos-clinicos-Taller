@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "case_id": "MANUAL-CARD-001",
+  "source": {
+    "dataset": "manual",
+    "source_id": "CARD-001"
+  },
+  "metadata": {
+    "specialty": "cardiologia",
+    "difficulty": "intermedio"
+  },
+  "initial_presentation": {
+    "demographics": {
+      "age": 58,
+      "sex": "masculino"
+    },
+    "chief_complaint": "Dolor torácico opresivo de inicio súbito",
+    "facts": []
+  },
+  "patient": {
+    "symptoms": [
+      {
+        "evidence_id": "MANUAL-CARD-001.patient.symptoms.symptom_01",
+        "code": "symptom_01",
+        "label": "Síntoma",
+        "value": null,
+        "unit": null,
+        "text": "Dolor torácico 8/10"
+      },
+      {
+        "evidence_id": "MANUAL-CARD-001.patient.symptoms.symptom_02",
+        "code": "symptom_02",
+        "label": "Síntoma",
+        "value": null,
+        "unit": null,
+        "text": "Náuseas y sudoración"
+      }
+    ],
+    "history": [
+      {
+        "evidence_id": "MANUAL-CARD-001.patient.history.history_01",
+        "code": "history_01",
+        "label": "Antecedente",
+        "value": null,
+        "unit": null,
+        "text": "Hipertensión arterial"
+      },
+      {
+        "evidence_id": "MANUAL-CARD-001.patient.history.history_02",
+        "code": "history_02",
+        "label": "Antecedente",
+        "value": null,
+        "unit": null,
+        "text": "Fumador de 20 paquetes-año"
+      }
+    ],
+    "allergies": []
+  },
+  "laboratory": {
+    "tests": [
+      {
+        "evidence_id": "MANUAL-CARD-001.laboratory.troponin_t",
+        "code": "troponin_t",
+        "label": "Troponina T",
+        "value": 1.8,
+        "unit": "ng/mL",
+        "text": null
+      },
+      {
+        "evidence_id": "MANUAL-CARD-001.laboratory.glucose",
+        "code": "glucose",
+        "label": "Glucosa",
+        "value": 118,
+        "unit": "mg/dL",
+        "text": null
+      }
+    ]
+  },
+  "radiology": {
+    "studies": [
+      {
+        "evidence_id": "MANUAL-CARD-001.radiology.ecg",
+        "code": "ecg",
+        "label": "ECG",
+        "value": null,
+        "unit": null,
+        "text": "Elevación del ST en II, III y aVF"
+      }
+    ]
+  },
+  "specialist": {
+    "consultations": [
+      {
+        "evidence_id": "MANUAL-CARD-001.specialist.cardiología",
+        "code": "cardiología",
+        "label": "Cardiología",
+        "value": null,
+        "unit": null,
+        "text": "Recomienda manejo urgente y correlación con biomarcadores"
+      }
+    ]
+  },
+  "reveal_policy": {
+    "MANUAL-CARD-001.patient.symptoms.symptom_01": {
+      "owner": "patient",
+      "mode": "on_request",
+      "intents": [
+        "ask_patient"
+      ],
+      "requires": {}
+    },
+    "MANUAL-CARD-001.patient.symptoms.symptom_02": {
+      "owner": "patient",
+      "mode": "on_request",
+      "intents": [
+        "ask_patient"
+      ],
+      "requires": {}
+    },
+    "MANUAL-CARD-001.patient.history.history_01": {
+      "owner": "patient",
+      "mode": "on_request",
+      "intents": [
+        "ask_patient"
+      ],
+      "requires": {}
+    },
+    "MANUAL-CARD-001.patient.history.history_02": {
+      "owner": "patient",
+      "mode": "on_request",
+      "intents": [
+        "ask_patient"
+      ],
+      "requires": {}
+    },
+    "MANUAL-CARD-001.laboratory.troponin_t": {
+      "owner": "laboratory",
+      "mode": "after_order",
+      "intents": [
+        "request_lab"
+      ],
+      "requires": {
+        "test": "troponin_t"
+      }
+    },
+    "MANUAL-CARD-001.laboratory.glucose": {
+      "owner": "laboratory",
+      "mode": "after_order",
+      "intents": [
+        "request_lab"
+      ],
+      "requires": {
+        "test": "glucose"
+      }
+    },
+    "MANUAL-CARD-001.radiology.ecg": {
+      "owner": "radiologist",
+      "mode": "after_order",
+      "intents": [
+        "request_radiology"
+      ],
+      "requires": {
+        "study": "ecg"
+      }
+    },
+    "MANUAL-CARD-001.specialist.cardiología": {
+      "owner": "specialist",
+      "mode": "after_consult",
+      "intents": [
+        "request_specialist"
+      ],
+      "requires": {
+        "consultation": "cardiología"
+      }
+    }
+  },
+  "protected_evaluation": {
+    "diagnosis": "Infarto agudo de miocardio inferior",
+    "diagnosis_synonyms": [
+      "Infarto inferior",
+      "IAM inferior",
+      "STEMI inferior"
+    ],
+    "reference_treatment": "Reperfusión urgente según elegibilidad",
+    "original_answer": "Infarto agudo de miocardio inferior"
+  },
+  "conversion_metadata": {
+    "pipeline_version": "1.0",
+    "status": "accepted",
+    "warnings": []
+  }
+}
